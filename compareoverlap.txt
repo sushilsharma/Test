@@ -1,0 +1,38 @@
+
+
+
+    function checkOverlap(newStart, newEnd) {
+
+        var Overlapfound = false;
+
+        for (let i = 0; i < schedules.length; i++) {
+            const schedule = schedules[i];
+            if (newStart < schedule.end && newEnd > schedule.start) {
+                Overlapfound = true;
+                break; // Overlap found
+            }
+        }
+
+        if (Overlapfound) {
+            alert('Overlap found');
+        } else {
+            alert('No overlap');
+        }
+    }
+
+
+
+
+// Example usage
+const newStart = new Date('2023-03-18T10:00:00');
+const newEnd = new Date('2023-03-18T14:00:00');
+checkOverlap(newStart, newEnd)
+
+
+
+
+public static string DataTableToJson(DataTable dataTable)
+{
+    string json = JsonConvert.SerializeObject(dataTable, Formatting.Indented);
+    return json;
+}
